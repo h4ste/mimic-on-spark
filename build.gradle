@@ -9,9 +9,6 @@ group 'com.github.h4ste'
 version '0.1-SNAPSHOT'
 
 dependencies {
-  // Require core MML project
-//  implementation project(':mimic-core')
-
   // Scala
   compile "org.scala-lang:scala-library:2.11.12"
   compile "org.scala-lang:scala-reflect:2.11.12"
@@ -23,13 +20,13 @@ dependencies {
   compile 'org.apache.spark:spark-hive_2.11:2.4.0'
 }
 
-createSparkScript('com.github.h4ste.jamia.cli.spark.MimicTableLoader', 'load_mimic_data', '..', 'scripts', 'data', 'spark')
-createSparkScript('com.github.h4ste.jamia.cli.spark.CcsTableLoader', 'load_ccs', '..', 'scripts', 'data', 'spark')
-createSparkScript('com.github.h4ste.jamia.cli.spark.HaAkiExtractor', 'extract_haaki', '..', 'scripts', 'data', 'spark')
-createSparkScript('com.github.h4ste.jamia.cli.spark.HaPiExtractor', 'extract_hapi', '..', 'scripts', 'data', 'spark')
-createSparkScript('com.github.h4ste.jamia.cli.spark.HaAExtractor', 'extract_haa', '..', 'scripts', 'data', 'spark')
-createSparkScript('com.github.h4ste.jamia.cli.spark.CommunityTableGenerator', 'load_community_views', '..', 'scripts', 'data', 'spark')
-createSparkScript('com.github.h4ste.jamia.cli.spark.DemographicsExtractor', 'extract_hadm_demographics', '..', 'scripts', 'data', 'spark')
+createSparkScript('com.github.h4ste.jamia.cli.spark.MimicTableLoader', 'load_mimic_data', 'scripts')
+createSparkScript('com.github.h4ste.jamia.cli.spark.CcsTableLoader', 'load_ccs', 'scripts')
+createSparkScript('com.github.h4ste.jamia.cli.spark.HaAkiExtractor', 'extract_haaki', 'scripts')
+createSparkScript('com.github.h4ste.jamia.cli.spark.HaPiExtractor', 'extract_hapi', 'scripts')
+createSparkScript('com.github.h4ste.jamia.cli.spark.HaAExtractor', 'extract_haa', 'scripts')
+createSparkScript('com.github.h4ste.jamia.cli.spark.CommunityTableGenerator', 'load_community_views', 'scripts')
+createSparkScript('com.github.h4ste.jamia.cli.spark.DemographicsExtractor', 'extract_hadm_demographics', 'scripts')
 
 def createSparkScript(String mainClass, String name, String... folders) {
 
