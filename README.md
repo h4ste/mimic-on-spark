@@ -14,6 +14,8 @@ as well as the following example application scripts:
 - extract_hapi: detects hospital acquired pressure injuries (HAPIs) and produces timestampped CSVs
 - extract_haa: detects hospital acquired anemia (HAA) and produces timestampped CSVs
 
+These scripts were used to prepare the data for our JAMIA paper, "A customizable deep learning model for nosocomial risk prediction from critical care notes with indirect supervision": https://doi.org/10.1093/jamia/ocaa004
+
 # Loading data
 To load data into a persistant SparkSQL database, first download the data from: [https://mimic.physionet.org/gettingstarted/dbsetup/](PhysioNet)
 Then, you can load the MIMIC-III data with:
