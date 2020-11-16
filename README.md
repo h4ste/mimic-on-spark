@@ -14,10 +14,10 @@ as well as the following example application scripts:
 - extract_hapi: detects hospital acquired pressure injuries (HAPIs) and produces timestampped CSVs
 - extract_haa: detects hospital acquired anemia (HAA) and produces timestampped CSVs
 
-These scripts were used to prepare the data for our JAMIA paper, "A customizable deep learning model for nosocomial risk prediction from critical care notes with indirect supervision": https://doi.org/10.1093/jamia/ocaa004
+These scripts were used to prepare the data for our JAMIA paper, ["A Customizable Deep Learning Model for Nosocomial Risk Prediction from Critical Care Notes with Indirect Supervision"](https://doi.org/10.1093/jamia/ocaa004). 
 
 # Loading data
-To load data into a persistant SparkSQL database, first download the data from: [https://mimic.physionet.org/gettingstarted/dbsetup/](PhysioNet)
+To load data into a persistant SparkSQL database, first download the data from: [PhysioNet](https://mimic.physionet.org/gettingstarted/dbsetup/)
 Then, you can load the MIMIC-III data with:
 ```shell
 $ sh scripts/load_mimic_data.sh PATH/TO/MIMIC/DATA [-g] [-d DATABASENAME] [-h|--help]
@@ -26,10 +26,10 @@ Where `-g` indicates that the MIMIC data files are gzipped, and `-d` indicates t
 Windows versions are available in `scripts/load_mimic_data.bat`.
 
 # Loading Community data
-Using the CCS data from [https://github.com/MIT-LCP/mimic-code/tree/master/concepts/diagnosis](The MIMIC Code Repository), the script
+Using the CCS data from the [Community MIMIC Code Repository](https://github.com/MIT-LCP/mimic-code/tree/master/concepts/diagnosis), the script
 `$ scripts/load_css.sh path/to/css/files` will load the CCS data.
 Likewise, the script
-`$ scripts/load_community_views.sh` will load various community view tables (used for examples scripts).
+`$ scripts/load_community_views.sh` will load various [community view tables](https://github.com/MIT-LCP/mimic-code/tree/master/concepts) (used for examples scripts).
 
 # Example scripts
 Three example scripts are available:
