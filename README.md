@@ -1,5 +1,5 @@
-# mimic-on-spark
-Small Java/Scala project for loading MIMIC-III datafiles into a persistent Spark SQL database.
+# MIMIC-on-SparkSQL
+Small Scala/JVM project for loading MIMIC-III datafiles into a persistent Spark SQL database.
 
 # Compiling
 To compile, run:
