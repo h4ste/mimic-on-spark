@@ -22,3 +22,16 @@ $ sh scripts/load_mimic_data.sh PATH/TO/MIMIC/DATA [-g] [-d DATABASENAME] [-h|--
 ```
 Where `-g` indicates that the MIMIC data files are gzipped, and `-d` indicates the name of the MIMIC-III database that will be created (default: 'mimic').
 Windows versions are available in `scripts/load_mimic_data.bat`.
+
+# Loading Community data
+Using the CCS data from [https://github.com/MIT-LCP/mimic-code/tree/master/concepts/diagnosis](The MIMIC Code Repository), the script
+`$ scripts/load_css.sh path/to/css/files` will load the CCS data.
+Likewise, the script
+`$ scripts/load_community_views.sh` will load various community view tables (used for examples scripts).
+
+# Example scripts
+Three example scripts are available:
+- `scripts/extract_haaki.sh path/to/output/dir ` will extract Hospital Aquired Acute Kidney Injury staging information to the given directory
+- `scripts/extract_hapi.sh path/to/output/dir ` will extract Hospital Aquired Pressure Injury staging information to the given directory
+- `scripts/extract_haa.sh path/to/output/dir ` will extract Hospital Aquired Anemia severity information to the given directory
+Windows versions are also available, various options can be viewed with by invoking the scripts with `[-h|--help]`.
